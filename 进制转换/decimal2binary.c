@@ -27,7 +27,7 @@ char* itoa(int value, char* result, int base) {
 
 char * Decimal2Binary(int Decimal)
 {
-	char *result = calloc(33, sizeof(int));
+	char *result = (char *)calloc(33, sizeof(char));
 	return itoa(Decimal, result, 2);
 }
 

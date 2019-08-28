@@ -8,7 +8,7 @@ char * Hex2Binary(char * Hex)
     // 转换后二进制需要的位数
     int binarySize = hexSize * 4;
     char *str = Hex;
-    char *result = calloc(binarySize+1, sizeof(char));
+    char *result = (char *)calloc(binarySize+1, sizeof(char));
     for (int i = 0, j = 0; j < hexSize; ++j)
     {
         switch (str[j+2])
@@ -42,26 +42,31 @@ char * Hex2Binary(char * Hex)
             result[i++] = '1';
             result[i++] = '0';
             result[i++] = '0';
+            break;
         case '5':
             result[i++] = '0';
             result[i++] = '1';
             result[i++] = '0';
             result[i++] = '1';
+            break;
         case '6':
             result[i++] = '0';
             result[i++] = '1';
             result[i++] = '1';
             result[i++] = '0';
+            break;
         case '7':
             result[i++] = '0';
             result[i++] = '1';
             result[i++] = '1';
             result[i++] = '1';
+            break;
         case '8':
             result[i++] = '1';
             result[i++] = '0';
             result[i++] = '0';
             result[i++] = '0';
+            break;
         case '9':
             result[i++] = '1';
             result[i++] = '0';

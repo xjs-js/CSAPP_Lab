@@ -72,11 +72,10 @@ char * binary2Hex(char *binary)
         extendBinary = binary;
     }
 
-    char *returnHex;
-    returnHex = calloc(binaryLength + 1, sizeof(char));
+    char *returnHex = (char *)calloc(binaryLength + 1, sizeof(char));
     int returnHexIndex = 0;
 
-    char *item = calloc(5, sizeof(char));
+    char *item = (char *)calloc(5, sizeof(char));
     int count = binaryLength / 4;
     while(count--)
     {
